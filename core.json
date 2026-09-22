@@ -1,0 +1,34 @@
+{
+    "core": {
+        "magic": "APF_VER_1",
+        "metadata": {
+            "platform_ids": ["virtualboy"],
+            "shortname": "VirtualBoy",
+            "description": "Experimental Virtual Boy port; tested on Pocket firmware 2.7.",
+            "author": "maxhoov",
+            "url": "https://github.com/maxhoov/VirtualBoyPocket",
+            "version": "0.1.0",
+            "date_release": "2026-09-22"
+        },
+        "framework": {
+            "target_product": "Analogue Pocket",
+            "version_required": "1.1",
+            "sleep_supported": false,
+            "dock": {
+                "supported": true,
+                "analog_output": false
+            },
+            "hardware": {
+                "link_port": false,
+                "cartridge_adapter": -1
+            }
+        },
+        "cores": [
+            {
+                "name": "Virtual Boy",
+                "id": 0,
+                "filename": "bitstream.rbf_r"
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "data": {
+        "magic": "APF_VER_1",
+        "data_slots": [
+            {
+                "id": 0,
+                "name": "Cartridge",
+                "required": true,
+                "parameters": "0x89",
+                "extensions": ["vb", "vboy", "bin"],
+                "size_maximum": "0x01000000",
+                "address": "0x00000000"
+            },
+            {
+                "id": 1,
+                "name": "Save RAM",
+                "required": false,
+                "nonvolatile": true,
+                "parameters": "0x24",
+                "extensions": ["sav"],
+                "size_exact": 8192,
+                "size_maximum": 8192,
+                "address": "0x10000000"
+            }
+        ]
+    }
+}

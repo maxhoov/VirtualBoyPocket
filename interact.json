@@ -1,0 +1,104 @@
+{
+    "interact": {
+        "magic": "APF_VER_1",
+        "variables": [
+            {
+                "id": 1, "name": "Display", "type": "list",
+                "enabled": true, "persist": true, "defaultval": 0,
+                "address": "0x20000000",
+                "options": [
+                    {"value": 0, "name": "Left eye (red)"},
+                    {"value": 1, "name": "Right eye (red)"},
+                    {"value": 2, "name": "Red / cyan 3D"},
+                    {"value": 3, "name": "Left eye (white)"}
+                ]
+            },
+            {
+                "id": 2, "name": "Handheld controls", "type": "list",
+                "enabled": true, "persist": true, "defaultval": 0,
+                "address": "0x20000004",
+                "options": [
+                    {"value": 0, "name": "Standard"},
+                    {"value": 1, "name": "Dual D-pad"}
+                ]
+            },
+            {
+                "id": 3, "name": "ROM load status (diag)", "type": "list",
+                "enabled": true, "persist": false, "address": "0x20000008",
+                "options": [
+                    {"value": 0, "name": "0 - No FIFO overflow"},
+                    {"value": 1, "name": "1 - FIFO overflow"}
+                ]
+            },
+            {
+                "id": 4, "name": "Boot stage", "type": "list",
+                "enabled": true, "persist": false, "address": "0x2000000c",
+                "options": [
+                    {"value": 0, "name": "0 - PLL not locked"},
+                    {"value": 1, "name": "1 - No ROM request"},
+                    {"value": 2, "name": "2 - Download active"},
+                    {"value": 3, "name": "3 - ROM not ready"},
+                    {"value": 4, "name": "4 - Host holds reset"},
+                    {"value": 5, "name": "5 - Clearing RAM"},
+                    {"value": 6, "name": "6 - Core held reset"},
+                    {"value": 7, "name": "7 - No ROM fetch"},
+                    {"value": 8, "name": "8 - ROM not replying"},
+                    {"value": 9, "name": "9 - No instruction yet"},
+                    {"value": 10, "name": "10 - Executed code"},
+                    {"value": 11, "name": "11 - FIFO overflow"}
+                ]
+            },
+            {
+                "id": 5, "name": "Diagnostic version", "type": "list",
+                "enabled": true, "persist": false, "address": "0x20000010",
+                "options": [
+                    {"value": 0, "name": "0 - Old bitstream"},
+                    {"value": 1, "name": "1 - Diag 20260917"},
+                    {"value": 2, "name": "2 - Diag 20260920"},
+                    {"value": 3, "name": "3 - Fault capture"},
+                    {"value": 4, "name": "4 - ROM order fix"},
+                    {"value": 5, "name": "5 - Menu pause"}
+                ]
+            },
+            {
+                "id": 6, "name": "CPU activity", "type": "list",
+                "enabled": true, "persist": false, "address": "0x20000014",
+                "options": [
+                    {"value": 0, "name": "0 - In reset"},
+                    {"value": 1, "name": "1 - No recent retire"},
+                    {"value": 2, "name": "2 - Executing"},
+                    {"value": 3, "name": "3 - Halted"},
+                    {"value": 4, "name": "4 - Illegal op seen"},
+                    {"value": 5, "name": "5 - Menu paused"}
+                ]
+            },
+            {
+                "id": 7, "name": "Output test", "type": "list",
+                "enabled": true, "persist": false, "defaultval": 0, "address": "0x20000018",
+                "options": [
+                    {"value": 0, "name": "Off - Game output"},
+                    {"value": 1, "name": "On - Pattern + tones"}
+                ]
+            },
+            {
+                "id": 8, "name": "VIP activity", "type": "list",
+                "enabled": true, "persist": false, "address": "0x2000001c",
+                "options": [
+                    {"value": 0, "name": "0 - In reset"},
+                    {"value": 1, "name": "1 - No frame sync"},
+                    {"value": 2, "name": "2 - Sync but black"},
+                    {"value": 3, "name": "3 - Nonblack pixels"}
+                ]
+            },
+            {
+                "id": 9, "name": "VSU activity", "type": "list",
+                "enabled": true, "persist": false, "address": "0x20000020",
+                "options": [
+                    {"value": 0, "name": "0 - Zero samples"},
+                    {"value": 1, "name": "1 - Nonzero samples"}
+                ]
+            }
+        ],
+        "messages": []
+    }
+}
